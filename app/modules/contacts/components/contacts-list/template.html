@@ -1,0 +1,24 @@
+<div class="contact-list-component">
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Designation</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                </td>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in $ctrl.contacts">
+                    <td>{{contact.firstName}} {{contact.lastName}}</td>
+                    <td>{{contact.company}}</td>
+                    <td>{{contact.designation}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.contact}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

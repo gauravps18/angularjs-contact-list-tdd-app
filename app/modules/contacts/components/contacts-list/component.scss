@@ -1,0 +1,21 @@
+.contact-list-component {
+    margin-bottom: 15px;
+    .table-wrap {
+        overflow-x: auto;
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            background-color: #0e80f0;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: solid 1px #ddd;
+            text-align: center;
+        }
+    }
+}
