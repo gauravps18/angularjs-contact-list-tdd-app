@@ -6,14 +6,14 @@ class ContactService {
     this.contacts = [{
       firstName: 'Gaurav',
       lastName: 'Sali',
-      contact: '+91 8698951987',
+      mobile: '+91 8698951987',
       email: 'gauravps18@gmail.com',
       company: 'GS Lab Pvt. Ltd.',
       designation: 'Senior Sofware Engineer'
     },{
       firstName: 'Suraj',
       lastName: 'Gangawane',
-      contact: '+91 9551886686',
+      mobile: '+91 9551886686',
       email: 'surajgangawane04@gmail.com',
       company: 'Atos Pvt. Ltd.',
       designation: 'Senior Sofware Engineer'

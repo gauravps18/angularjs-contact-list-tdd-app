@@ -1,0 +1,50 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/solid.css');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css');
+
+.add-contact-form {
+    width: 350px;
+    margin: auto;
+
+    h1 {
+        border-bottom: 6px solid;
+        padding-bottom: 5px
+    }
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px 0px;
+    margin: 8px 0px;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+
+    i {
+        width: 25px;
+        float: left;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        width: 80%;
+        font-size: 15px;
+        margin: 0 10px;
+    }
+}
+
+.action-btn {
+    width: 45%;
+    border: solid 1px #ddd;
+    padding: 10px 0px;
+    font-weight: bold;
+    background-color: #0e80f0;
+    color: white;
+
+    &.add {
+        float: left !important;
+    }
+
+    &.reset {
+        float: right !important;
+    }
+}

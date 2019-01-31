@@ -1,5 +1,39 @@
-<div>
-    <span>
-        This is Add Contact Component.
-    </span>
+<div class="add-contact-form">
+    <h1>Add Contact</h1>
+    <form name="$ctrl.contactForm" ng-submit="$ctrl.addContact()">
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Firstname" ng-model="$ctrl.form.firstName" required>
+        </div>
+    
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Lastname" ng-model="$ctrl.form.lastName" required>
+        </div>
+    
+        <div class="input-field">
+            <i class="fas fa-building"></i>
+            <input type="text" placeholder="Company" ng-model="$ctrl.form.company" required>
+        </div>
+    
+        <div class="input-field">
+            <i class="fas fa-briefcase"></i>
+            <input type="text" placeholder="Designation" ng-model="$ctrl.form.designation" required>
+        </div>
+    
+        <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" ng-model="$ctrl.form.email" required>
+        </div>
+    
+        <div class="input-field">
+            <i class="fas fa-mobile-alt"></i>
+            <input type="number" placeholder="Mobile" ng-model="$ctrl.form.mobile" ng-pattern="/^[0-9]{10}$/" required>
+        </div>
+
+        <input type="submit" value="ADD" class="action-btn add">
+
+        <input type="button" value="RESET" class="action-btn reset" ng-click="$ctrl.reset()">
+    </form>
+
 </div>

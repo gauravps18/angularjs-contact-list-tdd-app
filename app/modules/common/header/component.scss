@@ -1,0 +1,35 @@
+.header-container {
+    height: 75px;
+    width: 100%;
+    margin: 15px 0px;
+    background-color: #0e80f0;
+}
+
+.back {
+    float: left;
+    width: 50px;
+    padding: 12px 0px 0px 12px;
+    i {
+        font-size: 50px;
+    }
+}
+
+.app-title {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 12px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    i {
+        font-size: 50px;
+    }
+
+    span {
+        color: white;
+        display: inline-block;
+        height: 58px;
+        vertical-align: middle;
+    }
+    
+}

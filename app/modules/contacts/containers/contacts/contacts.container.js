@@ -20,7 +20,6 @@ class ContactsController {
 
 }
 
-
 const ContactsContainer = {
   template: require('./template.html'),
   selector: 'contacts',
