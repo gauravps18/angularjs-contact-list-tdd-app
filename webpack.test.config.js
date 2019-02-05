@@ -7,10 +7,10 @@ module.exports = {
     context: ROOT,
 
     resolve: {
-        extentions: ['js']
+        //extentions: '.js'
     },
 
-    mode: development,
+    mode: 'development',
 
     module: {
         rules: [
@@ -33,7 +33,10 @@ module.exports = {
                     /node_modules/,
                     /\.test\.js$/
                 ],
-                use: 'istanbul-instrumenter-loader',
+                use: {
+                    loader: 'istanbul-instrumenter-loader',
+                    options: { esModules: true }
+                },
                 enforce: 'post'
             },
             {
@@ -43,7 +46,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
                     'sass-loader'
                 ]
@@ -51,6 +54,7 @@ module.exports = {
         ]
     },
 
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
 
+    devServer: {}
 };

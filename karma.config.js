@@ -81,6 +81,13 @@ module.exports = function(config) {
       stats: 'errors-only'
     },
 
-    webpack: require('./webpack.test.config')
+    webpack: require('./webpack.test.config'),
+
+    coverageReporter: {
+      type: 'json',
+      subdir: '.',
+      dir: 'build/coverage/',
+      file: 'coverage.json'
+    }
   })
 }
