@@ -4,9 +4,10 @@
   "description": "AngularJs SPA with ES6 and Webpack bundler",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode=development",
-    "build": "eslint -c .eslintrc --fix app/ && webpack"
+    "build": "eslint -c .eslintrc --fix app/ && webpack",
+    "test": "eslint -c .eslintrc --fix app/ && karma start karma.config.js",
+    "test:coverage": "remap-istanbul -i build/coverage/coverage.json -o build/coverage/report -t html"
   },
   "keywords": [
     "AngularJs",
@@ -25,16 +26,27 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
+    "angular-mocks": "^1.7.6",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "eslint": "^5.12.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.5",
     "mini-css-extract-plugin": "^0.5.0",
     "ng-annotate-loader": "^0.6.1",
     "node-sass": "^4.11.0",
+    "remap-istanbul": "^0.13.0",
     "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"

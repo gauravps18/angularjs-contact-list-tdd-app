@@ -1,22 +1,22 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ROOT = path.resolve(__dirname, 'app');
+
 
 module.exports = {
-    entry: './app/app.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+    context: ROOT,
+
+    resolve: {
+        //extentions: '.js'
     },
+
+    mode: 'development',
+
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exclude: [
-                    /node_modules/,
-                    /\.test\.js$/
-                ],
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'babel-loader',
@@ -28,29 +28,33 @@ module.exports = {
                 enforce: 'pre'
             },
             {
+                test: /\.js$/,
+                exclude: [ 
+                    /node_modules/,
+                    /\.test\.js$/
+                ],
+                use: {
+                    loader: 'istanbul-instrumenter-loader',
+                    options: { esModules: true }
+                },
+                enforce: 'post'
+            },
+            {
                 test: /\.html$/,
                 use: ['html-loader']
             },
             {
                 test: /\.scss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    'style-loader',
                     'css-loader',
                     'sass-loader'
                 ]
             }
         ]
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            chunkFilename: '[name].css'
-        }),
-        new HtmlWebpackPlugin({
-            template: 'app/index.html',
-            filename: 'index.html',
-            inject: true
-        }),
-        new CleanWebpackPlugin('dist')
-    ]
+
+    devtool: 'inline-source-map',
+
+    devServer: {}
 };

@@ -32,10 +32,10 @@ class ContactService {
     this.contacts.push(data);
   }
 
-  removeContact(id) {
-    Assert.number(id);
-    this.contacts = this.contacts.filter(contact => contact.id !== id);
-  }
+  // removeContact(id) {
+  //   Assert.number(id);
+  //   this.contacts = this.contacts.filter(contact => contact.id !== id);
+  // }
 }
 
 export default ContactService;
